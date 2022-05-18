@@ -9,7 +9,13 @@ export class AuthController {
 
   @Post('register')
   register(@Body() dto: RegisterDto) {
-    const checkUser = this.authService.validate(dto)
+    let checkUser: any;
+    this.authService.validate(dto).then((res) => {
+      console.log(res);
+      checkUser = res
+    })
+    console.log(checkUser);
+
     if (!checkUser)
       return this.authService.register(dto);
   }

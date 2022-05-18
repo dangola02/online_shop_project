@@ -9,7 +9,7 @@ export class AuthService {
     @Inject('DATABASE_CONNECTION') private db: mongodb.Db,
   ) { }
   register(dto: RegisterDto) {
-    console.log(dto);
+    console.log('register');
     return this.db.collection('users').insertOne(dto);
   }
 
@@ -22,17 +22,19 @@ export class AuthService {
           password: dto.password,
         }
       }
-    ]);
+    ]).toArray();
   }
 
-  validate(dto: AuthDto) {
-    return this.db.collection('users').aggregate([
+  async validate(dto: AuthDto) {
+    console.log(`dto`, dto);
+
+    return await this.db.collection('users').aggregate([
       {
         $match: {
           email: dto.email
         }
       }
-    ]);
+    ]).toArray();
 
   }
 }

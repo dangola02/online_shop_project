@@ -6,7 +6,7 @@ export class ProfileDto{
     
     email:string
 
-    Address: string
+    address: string
 
     phone: string
 

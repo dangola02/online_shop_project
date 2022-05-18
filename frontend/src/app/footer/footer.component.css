@@ -1,0 +1,189 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    height: 70px;
+}
+
+.header__inner {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo__text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+.logo__text :hover {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+.logo__text div {
+    color: #00afca;
+}
+
+.logo__text div span {
+    color: #ffc50c;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+
+/* Nav */
+.nav {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+.nav__link1 {
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #00afca;
+    text-decoration: none;
+}
+
+.nav__link2 {
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #ffc50c;
+    text-decoration: none;
+}
+
+
+
+.main__content {
+    margin-top: 30px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.categories {
+    width: 250px;
+}
+
+ul.left_menu {
+    width: 250px;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+
+}
+
+ul.left_menu li {
+    margin: 0px;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    margin-top: 5px;
+    border-bottom: 1px solid;
+    margin-bottom: 5px;
+}
+
+ul.left_menu li :hover {
+    margin: 0px;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+.categories__text {
+    text-align: center;
+}
+
+.categories__images {
+    margin-right: 3px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 200px;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card__img {
+    border-radius: 5px 5px 0 0;
+}
+
+.card_text {
+    padding: 2px 16px;
+}
+
+.card__link {
+    text-decoration: none;
+    color: black;
+}
+
+.card__link:hover {
+    text-decoration: none;
+    color: black;
+}
+
+/* Css grid:  */
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+}
+
+.Contacts {
+    text-align: center;
+    margin-top: 100px;
+    background-color: gray;
+    height: 100%;
+    color: white;
+}
+
+.Contacts_link {
+    text-decoration: none;
+    color: white;
+}
+
+.Contacts_link :hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.Contacts_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+}
+
+.included {
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: 4fr;
+    grid-gap: 40px;
+}
